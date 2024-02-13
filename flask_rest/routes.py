@@ -4,9 +4,9 @@ from flask_restful import Resource, Api
 
 
 api = Api(app)
-class HelloWorld(Resource):
+class ThisIsAida(Resource):
     def get(self):
-        return {'hello': 'world'}
+        return {'key': 'Hi there welcome to aida!'}
 
 
 api.add_resource(HelloWorld, '/')
