@@ -9,4 +9,7 @@ class ThisIsAida(Resource):
         return {'key': 'Hi there welcome to aida!'}
 
 
-api.add_resource(HelloWorld, '/')
+api.add_resource(ThisIsAida, '/')
+
+
+
