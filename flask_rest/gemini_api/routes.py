@@ -28,7 +28,7 @@ class GeminiAPI(Resource):
         response = self.engine.generate_text(prompt)
 
         # return response
-        return {'response': response.text}
+        return {'response': response}
 
 
 

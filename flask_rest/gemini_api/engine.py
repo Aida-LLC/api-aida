@@ -47,7 +47,7 @@ class Engine:
         else:
             try:
                 response = self.model.generate_content(prompt)
-                return response
+                return response.text
             except:
-                return {"text":"Failed to generate response. Please try again."}
+                return "Failed to generate response. Please try again."
 
