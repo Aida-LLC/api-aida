@@ -45,9 +45,9 @@ class Engine:
         if self.model is None:
             raise ValueError("Model not loaded")
         else:
-            try:
-                response = self.model.generate_content(prompt)
-                return response.text
-            except:
-                return "Failed to generate response. Please try again."
+            # try:
+            response = self.model.generate_content(prompt)
+            return response.text
+            # except:
+            #     return "Failed to generate response. Please try again."
 
