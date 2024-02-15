@@ -48,6 +48,6 @@ class Engine:
             try:
                 response = self.model.generate_content(prompt)
                 return response
-            except Exception as e:
-                return str(e)
+            except:
+                return {"text":"Failed to generate response. Please try again."}
 
