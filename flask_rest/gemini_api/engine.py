@@ -41,16 +41,36 @@ class Engine:
     def load_model(self, model_name):
         self.model = genai.GenerativeModel(model_name)
 
+    def validate_prompt(self, prompt):
+        """
+        Validates the prompt input.
+
+        Parameters
+        ----------
+        prompt : str
+            The prompt to validate.
+
+        Returns
+        -------
+        str
+            An error message if the prompt is invalid, or None if the prompt is valid.
+        """
+        if not prompt:
+            return "Please provide a prompt."
+        elif len(prompt) < 1:
+            return "The prompt must be at least 1 character long."
+        else:
+            return None
+
     def generate_text(self, prompt):
         if self.model is None:
             raise ValueError("Model not loaded")
         else:
-            if len(prompt) < 1:
-                return "Please provide a prompt."
-
-            # try:
-            response = self.model.generate_content(prompt)
-            return response.text
-            # except:
-            #     return "Failed to generate response. Please try again."
+            validation = self.validate_prompt(prompt)
+            if validation is None:
+                try:
+                    response = self.model.generate_content(prompt)
+                    return response.text
+                except:
+                    return "Failed to generate response. Please try again."
 
