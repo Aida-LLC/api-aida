@@ -180,3 +180,136 @@ sudo systemctl status flask_app
 example output
 ![alt text](assets/service_status.png)
 
+
+### Configure Nginx to Proxy Requests
+
+Install Nginx
+
+```bash
+sudo apt install nginx
+```
+
+Create a new server block configuration file in Nginx's `sites-available` directory.
+
+```bash
+sudo nano /etc/nginx/sites-available/flask_app
+```
+
+Add the following configuration to the file. Replace `your_domain_or_ip` with your actual domain name or IP address.
+
+```bash
+server {
+    listen 80;
+    server_name 143.198.232.28;
+
+    location / {
+        proxy_pass https://143.198.232.28:5000;
+    }
+}
+```
+
+Create a symbolic link to the file in the `sites-enabled` directory.
+
+```bash
+sudo ln -s /etc/nginx/sites-available/flask-app /etc/nginx/sites-enabled
+```
+
+Test your Nginx configuration for syntax errors.
+
+```bash
+sudo nginx -t
+```
+
+you should see something like this
+
+```bash
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+```
+
+If the test is successful, restart Nginx.
+
+```bash
+sudo systemctl restart nginx
+```
+
+Remember we allowed port 5000 earlier, now we can remove it.
+
+```bash
+sudo ufw delete allow 5000
+```
+
+Now you should be able to access your app using your domain name or IP address without the port number. something like this `http://your_droplet_ip`
+
+### Secure your app with SSL
+
+Install certbot
+
+```bash
+sudo apt install certbot python3-certbot-nginx
+```
+
+Obtain a free SSL certificate for your domain using certbot if you have a domain.
+
+```bash
+sudo certbot --nginx -d your_domain_or_ip
+```
+
+Certbot will ask you to provide an email address for lost key recovery and notices, and to agree to the terms of service. After doing so, certbot will communicate with the Let's Encrypt server, then run a challenge to verify that you control the domain you're requesting a certificate for.
+
+When that's finished, certbot will ask how you'd like to configure your HTTPS settings.
+
+or you can use openssl to generate a self-signed certificate.
+
+```bash
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/flask_app.key -out /etc/ssl/certs/flask_app.crt
+```
+
+Create a new server block configuration file in Nginx's `sites-available` directory.
+
+```bash
+sudo nano /etc/nginx/sites-available/flask_app
+```
+
+Add the following configuration to the file. Replace `your_domain_or_ip` with your actual domain name or IP address.
+
+```bash
+
+server {
+    listen 80;
+    server_name
+
+    location / {
+        proxy_pass https://your_domain_or_ip;
+    }
+}
+
+server {
+    listen 443 ssl;
+    server_name your_domain_or_ip;
+
+    ssl_certificate /etc/ssl/certs/nginx-selfsigned.crt;
+    ssl_certificate_key /etc/ssl/private/nginx-selfsigned.key;
+
+    location / {
+        proxy_pass https://your_domain_or_ip;
+    }
+}
+```
+
+This configuration tells Nginx to listen on both port 80 (HTTP) and port 443 (HTTPS). It uses the self-signed certificate and private key that you created.
+
+After updating the Nginx configuration, remember to test the configuration and reload or restart Nginx:
+
+```bash
+sudo nginx -t
+sudo systemctl reload nginx
+```
+
+The `nginx -t` command checks the configuration for syntax errors. The `systemctl reload nginx` command reloads the Nginx configuration without interrupting currently connected clients.
+
+*Please note that because the certificate is self-signed, browsers will show a warning to users that the site is not secure. Users will need to manually accept the risk and proceed to the site.*
+
+### Conclusion
+
+Hopefully with this guide, you were able to deploy your flask app in a digital ocean droplet. Your projects are way too precious to be running on localhost. Deploy them and share them with the world. If you have any questions or suggestions, feel free to reach out help is everywhere. ✨
