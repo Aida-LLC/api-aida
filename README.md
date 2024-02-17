@@ -1,5 +1,7 @@
 # Deploying Flask App in Digital Ocean Droplet
 
+Have you ever poured hours of dedication into a project, only to let it linger in the confines of **localhost**? Your creations are too precious to be confined to the boundaries of your local machine. It's time to unleash them onto the global stage by mastering the art of deploying Flask applications on a Digital Ocean droplet or any **Ubuntu Server.**
+
 ## Deploy Guide
 
 Step by step  guide to deploying Flask app in digital ocean droplet using gunicorn and nginx.
@@ -38,6 +40,8 @@ Provide your password and you are in.
 sudo apt update
 sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
 ```
+
+the command sudo apt update refreshes the list of available software packages on your system, ensuring that it has the latest information from the repositories. Following that, sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools installs essential tools and dependencies for Python development. This includes the Python 3 package manager (python3-pip), development headers for Python (python3-dev), fundamental build tools (build-essential), as well as libraries for SSL and FFI (libssl-dev and libffi-dev), and the Python package distribution tools (python3-setuptools).
 
 ### Create a virtual environment
 
