@@ -1,4 +1,4 @@
-# API AIDA
+# Deploying Flask App in Digital Ocean Droplet
 
 ## Deploy Guide
 
