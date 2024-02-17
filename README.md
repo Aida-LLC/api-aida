@@ -1,6 +1,6 @@
 # Deploying Flask App in Digital Ocean Droplet
 
-Have you ever poured hours of dedication into a project, only to let it linger in the confines of **localhost**? Your creations are too precious to be confined to the boundaries of your local machine. It's time to unleash them onto the global stage by mastering the art of deploying Flask applications on a Digital Ocean droplet or any **Ubuntu Server.**
+Recently, I read a blog post about customizing APIs from Gemini Models, but when I tried following the instructions, everything got stuck at localhost:5000. Basically, my apps were only visible on my computer. So, I went on a quest to figure out how to make it accessible to everyone. That's when I learned about deploying Flask apps on a Digital Ocean droplet. This guide is like a map to help you do the same, so your projects don't get stuck at localhost:5000 either. Let's share your awesome creations with the world! ✨ It's time to unleash them onto the global stage by mastering the art of deploying Flask applications on a Digital Ocean droplet or any **Ubuntu Server.**
 
 ## Deploy Guide
 
