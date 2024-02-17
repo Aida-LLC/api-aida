@@ -28,6 +28,7 @@ connect to your droplet using ssh.
 ```bash
 ssh root@your_droplet_ip
 ```
+![alt text](assets/ssh_init.png)
 
 Provide your password and you are in.
 
@@ -69,7 +70,7 @@ let's call our project `flask_app`
 
 ```bash
 git clone your_project_url.git
-cd let's call our project `flask_app`
+cd flask_app
 ```
 
 ### Install project dependencies
