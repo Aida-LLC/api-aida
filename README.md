@@ -158,7 +158,7 @@ User=root
 Group=www-data
 WorkingDirectory=/root/apps/flask_app
 Environment="PATH=/root/apps/venv/bin"
-ExecStart=/root/apps/venv/bin/gunicorn --workers 3 --bind unix:flask_app.sock -m 007 wsgi:app
+ExecStart=/root/apps/venv/bin/gunicorn --workers 3 --bind 0.0.0.0:5000 -m 777 wsgi:app
 
 [Install]
 WantedBy=multi-user.target
@@ -176,3 +176,7 @@ Check the status of the service to make sure it's running without any issues.
 ```bash
 sudo systemctl status flask_app
 ```
+
+example output
+![alt text](assets/service_status.png)
+
