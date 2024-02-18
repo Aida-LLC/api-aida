@@ -1,4 +1,5 @@
 import textwrap
+import markdown
 import google.generativeai as genai
 from .credentials import gemini_key
 
@@ -71,7 +72,7 @@ class Engine:
                 try:
                     response = self.model.generate_content(prompt)
                     if format == 'html':
-                        return markdown(response.text)
+                        return markdown.markdown(response.text)
                     return response.text
                 except:
                     return "Failed to generate response. Please try again."
