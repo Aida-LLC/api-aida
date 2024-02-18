@@ -62,7 +62,7 @@ class Engine:
         else:
             return None
 
-    def generate_text(self, prompt):
+    def generate_text(self, prompt, format):
         if self.model is None:
             raise ValueError("Model not loaded")
         else:
@@ -70,6 +70,8 @@ class Engine:
             if validation is None:
                 try:
                     response = self.model.generate_content(prompt)
+                    if format == 'html':
+                        return markdown(response.text)
                     return response.text
                 except:
                     return "Failed to generate response. Please try again."

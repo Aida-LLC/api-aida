@@ -17,6 +17,7 @@ class GeminiAPI(Resource):
         self.parser = reqparse.RequestParser()
         # Add argument parsing for each input feature
         self.parser.add_argument('prompt', type=str)
+        self.parser.add_argument('format', type=str)
 
     def get(self):
         return {'message': 'Hello from gemini!'}
@@ -25,7 +26,10 @@ class GeminiAPI(Resource):
         # get data
         args = self.parser.parse_args()
         prompt = args['prompt']
-        response = self.engine.generate_text(prompt)
+        format = args['format']
+        if format == None or format == '':
+            format = 'markdown'
+        response = self.engine.generate_text(prompt, format=format)
 
         # return response
         return {'response': response}
