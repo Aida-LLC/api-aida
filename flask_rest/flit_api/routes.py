@@ -2,7 +2,7 @@
 from flask import Blueprint
 from flask_restful import Api, Resource, reqparse
 
-
+from .engine import ChatProcessor
 
 # Create a new blueprint for the Flit Api
 flit_bp = Blueprint('flit_api', __name__)
@@ -10,10 +10,13 @@ flit_bp = Blueprint('flit_api', __name__)
 
 class FlitAPI(Resource):
     def __init__(self):
+        self.chat_processor = ChatProcessor()
+        self.rag_chain = self.chat_processor.initialize_rag_chain()
+        
         self.parser = reqparse.RequestParser()
         # Add argument parsing for each input feature
-        self.parser.add_argument('prompt', type=str)
-        self.parser.add_argument('format', type=str)
+        self.parser.add_argument('question', type=str)
+        self.parser.add_argument('history', type=str)
 
     def get(self):
         return {'message': 'Hello from flit!'}
@@ -21,14 +24,15 @@ class FlitAPI(Resource):
     def post(self):
         # get data
         args = self.parser.parse_args()
-        prompt = args['prompt']
-        format = args['format']
-        if format == None or format == '':
-            format = 'markdown'
-        response = f'Flit says: {prompt}'
+        question = args['question']
+        history = args['history']
+
+        chat_history = self.chat_processor.generate_history(history)
+        ai_message = self.rag_chain.invoke({"question": question, "chat_history": chat_history})
+
 
         # return response
-        return {'response': response}
+        return {'response': ai_message.content}
 
 
 # Create a new Api for the new blueprint
