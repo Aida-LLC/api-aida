@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 flask_rest/gemini_api/credentials.py
 dat
+flask_rest/flit_api/credentials.py
