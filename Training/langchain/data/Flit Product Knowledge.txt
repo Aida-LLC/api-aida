@@ -1,0 +1,235 @@
+﻿1 Customer App
+Overview
+The Customer App serves as a crucial interface facilitating communication between customers and Flit Services. Its primary goal is to streamline the ordering process, aiming for quick and efficient order placement.
+Key Features
+Product Catalog:
+
+
+Customers can seamlessly browse and search through an extensive product catalog.
+The catalog encompasses a diverse array of items across various categories and subcategories.
+
+
+Shopping Cart:
+Users have the ability to add desired items to their cart.
+The shopping cart feature allows customers to monitor and manage their purchases in real-time.
+
+
+Payment Processing:
+The app supports cash on delivery payments, ensuring flexibility for customers.
+Product and Order Recommendation Engine:
+
+A recommendation engine aids customers in placing convenient orders efficiently.
+Recommendations are based on previous order history and product preferences.
+
+
+Customer Accounts:
+Customers can create accounts to personalize their experience.
+Account functionalities include managing personal information and accessing order history.
+
+
+Real-time GPS Shop Location:
+For precise and convenient deliveries, customers can select the exact shop location on the map.
+Real-time GPS tracking ensures accuracy in the delivery process.
+
+
+Push Notifications:
+The app proactively sends notifications to users, keeping them informed about special offers, sales, and promotions.
+Example : Message response from customer service chat
+
+In-App Customer Support:
+Customers have access to in-app customer support, simplifying the resolution of queries related to purchases and order tracking.
+
+
+Installation and Usage Requirements for Flit Customer App
+Platform Compatibility
+The Customer App is compatible with Android devices. Requires Android version 7 (Lollipop) and above. An active internet connection is essential for content display and seamless app functionality.
+Download and Installation:
+Users can download the app from the official App Store or Google Play Store. The app is available at Flit website or playstore
+Getting Started:
+1. Open the app and skip introductory pages.
+2. Tap "Jisajili" to create an account.
+3. Enter personal information and create a password.
+4. Confirm registration through a one-time password sent to the user's device.
+5. Login with the provided credentials to access the account.
+Browsing and Searching for Products:
+Users can browse and search for products by selecting product categories and subcategories on the home screen.
+The search bar, displayed on top of each screen (activity), allows users to filter products by category and name.
+
+
+Placing an Order:
+Select products by tapping "Ongeza" or "+" to increase the quantity in the cart, or "-" to decrease the quantity.
+After selecting products, customers can review and make adjustments in the cart before placing the order.
+
+Payment Options:
+1. The app supports cash on delivery payments, allowing customers to pay for their orders upon delivery.
+2. M Pesa Lipa number 54218791
+
+To Pay with lipa number follow this steps
+1. Piga *150*00# 
+2. Chagua na. 4- Lipa kwa MPESA. 
+3. Chagua na. 1 - Lipa kwa simu. 
+4. Chagua na. 1 - Lipa namba. 
+5. Chagua na. 1 - M-PESA. 
+6. Weka LipaNamba '54218791' na bonyeza OK. 
+7. Weka kiasi na bonyeza OK. 
+8. Weka namba ya siri. 9. Thibitisha namba 1.
+
+
+Address Selection:
+Each order belongs to a specified shop with an exact GPS coordinate for accurate deliveries.
+Users can create a new shop address by tapping "Anwani" in the menu bar and selecting the shop's name and position on the map.
+Delivery Scheduling:
+After confirming the delivery location, users can select the desired delivery date.
+Order Confirmation:
+Finalize the order by accepting the placement.
+Order Rating:
+Customers can provide weighted feedback on service delivery right after the order is completed.
+Order Tracking:
+Users can track the progress of their orders through the "Oda zangu" menu or the action button labeled "Fuatilia oda" right after placing an order.
+
+
+Help and Support
+For customer support within the Flit Customer App, users have multiple avenues to seek assistance and resolve queries.
+1. Real-Time Chat:
+Customers can access real-time chat support by navigating to the "Contact Us" section within the app.
+The chat feature provides instant communication with customer support representatives, allowing users to get immediate assistance for any issues or questions they may have.
+2. Live Customer Care Call:
+A dedicated customer care phone number is available for live support.
+Users can initiate a call to the specified customer care number to connect with a live representative who can provide assistance, answer inquiries, and address concerns.
+Product Recommendation 
+The Product Recommendation Engine in the Flit Customer App enhances the shopping experience by guiding customers towards products with a high likelihood of interest, based on their previous order patterns.
+Customers can access the Product Recommendation section in multiple ways:
+* On app start.
+* After logging in.
+* After creating an order.
+* Through the app menu by tapping "Suggestive order."
+Suggestive Order Pop-up:
+A pop-up interface is provided to display suggested products, ensuring a seamless and visually intuitive experience.
+Product Recommendations:
+Customers can view the list of suggested products by tapping on "Angalia bidhaa."
+Order Auto-Generation:
+To create an order from the suggested products, customers can tap on "Tengeneza oda." The app will automatically add the recommended products to the customer's cart. Subsequently, the cart screen will open, allowing the customer to make adjustments and confirm the placement of the new order. 
+
+
+IMPORTANT
+All users are required to have an account to access flit, else the app will not work.
+
+
+AVAILABLE PRODUCTS
+product_name: Coke 6NP retail_price: 8800 size: 1.25 LTR ,
+product_name: Fanta Orange 6 NP retail_price: 8800 size: 1.25 LTR ,
+product_name: Fanta Passion 6NP retail_price: 8800 size: 1.25 LTR ,
+product_name: Fanta Pineapple 6NP retail_price: 8800 size: 1.25 LTR ,
+product_name: Dasani Water Still 6NP retail_price: 4750 size: 1.5 LTR ,
+product_name: Dasani Water Still 12NP retail_price: 4000 size: 500ML ,
+product_name: Sprite retail_price: 6800 size: 250 ML ,
+product_name: Fanta Pinepple retail_price: 9700 size: 250ML ,
+product_name: Fanta Orange retail_price: 9700 size: 250ML ,
+product_name: Fanta Passion retail_price: 9700 size: 250ML ,
+product_name: Coke 12 NP retail_price: 6800 size: 300ML ,
+product_name: Tangawizi 24 RGB retail_price: 13400 size: 350ML ,
+product_name: Fanta Orange 24 RGB retail_price: 13400 size: 350ML ,
+product_name: Coke 24 RGB retail_price: 13400 size: 350ML ,
+product_name: Fanta Pineapple 24 RGB retail_price: 13400 size: 350ML ,
+product_name: Fanta Passion 24 RGB retail_price: 13400 size: 350ML ,
+product_name: Sprite 24 RGB retail_price: 13400 size: 350ML ,
+product_name: Fanta Fruit Blast 24 RGB retail_price: 13400 size: 350 ML ,
+product_name: Krest Bitter Lemon 24 RB retail_price: 11800 size: 300ML ,
+product_name: Sprite 24 Cans retail_price: 28800 size: 330ML ,
+product_name: Coke 24 cans retail_price: 28800 size: 330ML ,
+product_name: Orange 24 Cans retail_price: 28800 size: 330ML ,
+product_name: Sparletta PineNut 24 RGB retail_price: 13400 size: 350ML ,
+product_name: Fanta Orange 20 RB retail_price: 13000 size: 500ML ,
+product_name: Fanta Passion retail_price: 13000 size: 500ML ,
+product_name: Coke retail_price: 13000 size: 500ML ,
+product_name: Fanta Pineapple retail_price: 13000 size: 500ML ,
+product_name: Coke retail_price: 9700 size: 250ML ,
+product_name: Coke 12NP retail_price: 8800 size: 500ML ,
+product_name: Fanta Passion 12NP retail_price: 8800 size: 500ML ,
+product_name: Fanta Pineapple 12NP retail_price: 8800 size: 600ML ,
+product_name: Fanta Orange 12NP retail_price: 8800 size: 500ML ,
+product_name: Tangawizi 12NP retail_price: 8800 size: 500ML ,
+product_name: Sparletta PineNut 12 retail_price: 8800 size: 600ML ,
+product_name: Sprite 12NP retail_price: 8800 size: 500ML ,
+product_name: Fanta Fruit Blast 12NP retail_price: 8800 size: 500ML ,
+product_name: Novida Pineapple 12NP retail_price: 8800 size: 500ML ,
+product_name: Coke 6NP retail_price: 4750 size: 750ML ,
+product_name: Coke Zero 6 NP retail_price: 4750 size: 750ML ,
+product_name: Sprite 6NP retail_price: 4750 size: 750ML ,
+product_name: Fanta Zero 6NP retail_price: 4750 size: 750ML ,
+product_name: Fanta Orange 12 NP retail_price: 6800 size: 300ML ,
+product_name: Sprite 12NP retail_price: 6800 size: 300ML ,
+product_name: Krest Bitter Lemon 12NP retail_price: 6800 size: 300ML ,
+product_name: Fanta Fruit Blast 12 NP retail_price: 6800 size: 300ML ,
+product_name: Krest Soda Water 12NP retail_price: 6800 size: 300ML ,
+product_name: Sch Novida Pineapple 12 NP retail_price: 6800 size: 300ML ,
+product_name: Fanta Passion 12 NP retail_price: 6800 size: 300ML ,
+product_name: Fanta Pineapple 12 NP retail_price: 6800 size: 300ML ,
+product_name: Schweppes Tonic Water 12 NP retail_price: 6800 size: 300ML ,
+product_name: Sprite 6NP retail_price: 8800 size: 1.25 LTR ,
+product_name: Krest Soda Water 24 RB retail_price: 11800 size: 300ML ,
+product_name: Krest Tonic 24 RB retail_price: 11800 size: 300ML ,
+product_name: Minute Maid Embe 12 NP retail_price: 8500 size: 400ML ,
+product_name: Minute Maid Apple 12 NP retail_price: 8500 size: 400ML ,
+product_name: Minute Maid Embe 6 NP retail_price: 11500 size: 1LTR ,
+product_name: Minute Maid Apple 6 NP retail_price: 11500 size: 1 LTR ,
+product_name: Dasani Water Sparking 12 NP retail_price: 8500 size: 500ML ,
+product_name: Monster Energy 24 NP retail_price: 60000 size: 500ML ,
+product_name: 4th STREET RED 6 NB retail_price: 56000 size: 750 LTR ,
+product_name: 4th STREET ROSE 6 NB retail_price: 56000 size: 750 LTR ,
+product_name: 4th STREET WHITE 6 NB retail_price: 56000 size: 750ML ,
+product_name: SCOTIISH LEADER 6 NB retail_price: 120000 size: 750 ML ,
+product_name: 4th STREET RED 4 BIB retail_price: 183000 size: 5LTR ,
+product_name: 4th STREET WHITE 4 BIB retail_price: 183000 size: 5LTR ,
+product_name: 4th STREET ROSE 4 BIB retail_price: 183000 size: 5LTR ,
+product_name: Nederburg 56Hundred 6 NB retail_price: 138000 size: 750ML ,
+product_name: Nederburg WM Res Cab 6 NB retail_price: 140000 size: 750ML ,
+product_name: Nederburg Merlot 6 NB retail_price: 138000 size: 750ML ,
+product_name: Nederburg Wm Res Shiraz 6 NB retail_price: 140000 size: 750ML ,
+product_name: Nederburg WM Chardonnay 6 NB retail_price: 138000 size: 750ML ,
+product_name: Nederburg WM Sauvignon 6 NB retail_price: 138000 size: 750ML ,
+product_name: Nederburg Pinotage 6 NB retail_price: 138000 size: 750ML ,
+product_name: Nederburg Rosé 6 NB retail_price: 92000 size: 750ML ,
+product_name: Nederburg Baronne 6 NB retail_price: 138000 size: 750ML ,
+product_name: Nederburg Cuvée 6 NB retail_price: 124000 size: 750ML ,
+product_name: savanna dry 24 NB retail_price: 75000 size: 330ML ,
+product_name: Chamdor White 6 NB retail_price: 57000 size: 750 ML ,
+product_name: Chamdor Red 6 NB retail_price: 57000 size: 750ML ,
+product_name: Viceroy Brandy 35 NB retail_price: 45000 size: 200ML ,
+product_name: Viceroy Brandy 12 NB retail_price: 222000 size: 750ML ,
+product_name: Drostdy Hot Claret 6 NB retail_price: 65000 size: 750ML ,
+product_name: Drostdy Hof Grand Cru 6 NB retail_price: 65000 size: 750ML ,
+product_name: Drostdy Hof Stein 6 NB retail_price: 50000 size: 750ML ,
+product_name: Drostdy Hof Claret 12 NB retail_price: 72000 size: 375ML ,
+product_name: Drostdy HofGrand Cru 12 NB retail_price: 72000 size: 375 ,
+product_name: Drostdy Hof Stein 12 NB retail_price: 57000 size: 375ML ,
+product_name: Drostdy Hof Grand Cru 4 BIB retail_price: 205000 size: 5LTR ,
+product_name: Drostdy Hof Claret 4 BIB retail_price: 205000 size: 5LTR ,
+product_name: Drostdy Hof Stein 4 BIB retail_price: 175000 size: 5LTR ,
+product_name: Amarula cream 6 NP retail_price: 187000 size: 1LTR ,
+product_name: Amarula Cream 6 NP retail_price: 159000 size: 750ML ,
+product_name: amarula cream 12 NB retail_price: 156000 size: 375ML ,
+product_name: amarula cream 24 NB retail_price: 334000 size: 375 ML ,
+product_name: overmeer Red 4 BIB retail_price: 173000 size: 5LTR ,
+product_name: overmeer grand cru 4 BIB retail_price: 173000 size: 5LTR ,
+product_name: Jc le roux wine domain 6 ND retail_price: 118000 size: 750ML ,
+product_name: Jc le roux wine chanson 6 NB retail_price: 118000 size: 750ML ,
+product_name: Hunter's Dry Cider 24 NRB retail_price: 71000 size: 330ML ,
+product_name: Scottish Leader 12 Year Old 6 NB retail_price: 226000 size: 750ML ,
+product_name: two oceans cabernet 6 NB retail_price: 95000 size: 750ML ,
+product_name: Two Oceans Sauvignon retail_price: 65000 size: 750ML ,
+product_name: Coke retail_price: 13400 size: 350 ML ,
+product_name: Krest Bitter Lemon 24 RB retail_price: 13400 size: 300 ML ,
+product_name: Krest Soda Water 24 RB retail_price: 13400 size: 300 ML ,
+product_name: Krest Tonic 24 RB retail_price: 13400 size: 300 ML ,
+product_name: Coke 12NP retail_price: 10400 size: 600ML ,
+product_name: Fanta Orange 12NP retail_price: 10400 size: 600ML ,
+product_name: Fanta Pineapple 12NP retail_price: 10400 size: 600ML ,
+product_name: Fanta Passion 12NP retail_price: 10400 size: 600ML ,
+product_name: Sprite 12NP retail_price: 10400 size: 600ML ,
+product_name: Tangawizi 12NP retail_price: 10400 size: 600ML ,
+product_name: Novida Pineapple 12NP retail_price: 10400 size: 600ML ,
+product_name: Fanta Fruit Blast 12 NP retail_price: 10400 size: 600ML ,
+product_name: Sparletta PineNut 12 retail_price: 10400 size: 600ML ,
+product_name: Newtonson October Gift retail_price: 0 size: Gift ,
+product_name: Coke 6NP retail_price: 0 size: Gift ,
