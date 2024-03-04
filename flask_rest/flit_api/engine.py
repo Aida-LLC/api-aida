@@ -50,20 +50,19 @@ class ChatProcessor:
         )
 
     def generate_history(self, chat_history):
-        """_summary_
-            this function takes a 2D list of chat history
-            and returns chat history as [
-                HumanMessage(content="question1"), AIMessage(content="answer1"),
-            ]
-        """
+        # Split the chat history at every -br- to get a list of messages
+        messages = chat_history.split(" -br- ")
 
-        history = []
-        for i, message in enumerate(chat_history):
-            if i % 2 == 0:
-                history.append(HumanMessage(content=message))
-            else:
-                history.append(AIMessage(content=message))
-        return history
+        # Extract human and AI pairs
+        _messages = []
+
+        for msg in messages:
+            if msg.startswith("_h_:"):
+                _messages.append(HumanMessage(content=msg.split(":")[1].strip()))
+            elif msg.startswith("_ai_:"):
+                _messages[-1] = AIMessage(content=msg.split(":")[1].strip())
+
+        return _messages
 
 
     def format_docs(self, docs):

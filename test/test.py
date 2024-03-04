@@ -1,8 +1,24 @@
-import markdown
+from langchain_core.messages import AIMessage, HumanMessage
 
-text_md = """
-```python\nlogbook_entries = {\n    \"Monday\": {\n        \"Entry\": \"Initiated practical training with sketching exercise to conceptualize design ideas. Explored various concepts and layouts, capturing initial impressions and exploring design possibilities.\"\n    },\n    \"Tuesday\": {\n        \"Entry\": \"Digitized sketches using design software, creating digital prototypes. Familiarized myself with industry-standard tools, translating hand-drawn concepts into digital form for further refinement.\"\n    },\n    \"Wednesday\": {\n        \"Entry\": \"Refined designs, iterating through multiple versions to enhance functionality and aesthetics. Applied design principles, user-centered approach, and feedback from the team to optimize prototypes.\"\n    },\n    \"Thursday\": {\n        \"Entry\": \"Tested prototypes with users, conducting usability testing to evaluate effectiveness and gather feedback. Observed user interactions, noted pain points, and identified areas for improvement.\"\n    },\n    \"Friday\": {\n        \"Entry\": \"Finalized prototype, incorporating feedback and refining the design for clarity, usability, and aesthetics. Presented the polished prototype to team members for evaluation, showcasing the outcome of the week's practical training.\"\n    }\n}\n```
-"""
+blob ="_h_:Hi there -br- _h_:How are you? -br- _ai_:Hello, how can I help you? -br- _h_:What's the weather like? -br- _ai_:The weather is sunny today. -br- _h_:Tell me a joke -br- _ai_:Why did the chicken cross the road?"
 
-html = markdown.markdown(text_md)
-print(html)
+#  split the blob at every -br- to get a list of messages
+messages = blob.split(" -br- ")
+
+
+# Extract human and AI pairs
+human_messages = []
+ai_messages = []
+
+for msg in messages:
+    if msg.startswith("_h_:"):
+        human_messages.append(HumanMessage(content=msg.split(":")[1].strip()))
+        ai_messages.append(AIMessage(content=""))
+    elif msg.startswith("_ai_:"):
+        ai_messages[-1] = AIMessage(content=msg.split(":")[1].strip())
+
+# Create a list of pairs
+message_pairs = list(zip(human_messages, ai_messages))
+
+
+print(message_pairs)
