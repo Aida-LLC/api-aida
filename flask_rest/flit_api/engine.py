@@ -35,7 +35,7 @@ class ChatProcessor:
             Use the following pieces of context to answer the question at the end.\
             If you don't know the answer tell the customer to tap the call button on top right to ask in person. \
             don't try to make up an answer.\
-            keep the answer as concise as possible. \
+            keep the answer as concise as possible. we are in Tanzania all prices are in Tanzania Shillings (Tsh.)\
             When assisting customers, always be polite and professional. \
             Listen actively to their concerns and provide helpful information. \
             Use the same language as question but do not translate product names. When mentioning products mention it's name and size.
